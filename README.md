@@ -42,6 +42,32 @@ npm run dev
 
 Open `http://localhost:3000/day1_consultation01`.
 
+## Blinded Notes
+
+The app also serves blinded note-review pages:
+
+```text
+/day1_consultation01/notes/note-a
+/day1_consultation01/notes/note-b
+/day1_consultation01/notes/note-c
+/day1_consultation01/notes/note-d
+```
+
+Each consultation has four tabs labeled only as Note A-D. The source order is
+randomized deterministically and saved in `lib/notes-data.ts`, so the same
+consultation always shows the same blinded order across deployments.
+
+The source workbook is `source_data.xlsx`, with sheets named `Clinpax`, `Heidi`,
+`MBSPro`, and `Lyrebird`, each containing `consult_id` and `soap_note` columns.
+After updating the workbook locally, regenerate note data with:
+
+```bash
+npm run generate:notes
+```
+
+`source_data.xlsx` is ignored by git and Vercel; only the generated note data is
+deployed. Blank workbook notes render as a clear “not available yet” message.
+
 ## Hosted Audio
 
 Upload every file in `primock57/output/mixed_audio_mp3` to your public audio

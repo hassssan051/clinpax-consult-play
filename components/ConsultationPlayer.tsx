@@ -50,9 +50,14 @@ export default function ConsultationPlayer({
             <p className="eyebrow">Primock57</p>
             <h1>{consultation.title}</h1>
           </div>
-          <Link className="back-link" href="/">
-            All consultations
-          </Link>
+          <div className="player-actions">
+            <Link className="back-link" href={`/${consultation.id}/notes`}>
+              Blinded notes
+            </Link>
+            <Link className="back-link" href="/">
+              All consultations
+            </Link>
+          </div>
         </div>
 
         {audioUrl ? (

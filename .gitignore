@@ -2,6 +2,8 @@ node_modules/
 .next/
 out/
 primock57/
+source_data.xlsx
+private/
 
 .env
 .env.local

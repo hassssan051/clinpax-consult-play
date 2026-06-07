@@ -3,3 +3,5 @@ node_modules
 .env
 .env.local
 primock57
+source_data.xlsx
+private

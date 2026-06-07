@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "generate:data": "node scripts/generate-consultations.mjs",
+    "generate:notes": "python scripts/generate-notes-data.py",
     "check:data": "node scripts/check-consultations.mjs"
   },
   "dependencies": {
